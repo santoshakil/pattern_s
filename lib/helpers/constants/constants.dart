@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'package:intl/intl.dart';
 
 import '../size_config/size_config.dart';
@@ -9,12 +10,12 @@ DateFormat dateFormat = DateFormat("dd-MM-yy");
 const String webViewUserAgent =
     'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36';
 
-//SignUp Form Error
 final RegExp emailValidatorRegExp =
     RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
 final RegExp emailPhoneValidatorRegExp =
     RegExp(r"^([0-9]{9})|([A-Za-z0-9._%\+\-]+@[a-z0-9.\-]+\.[a-z]{2,3})$");
 
+//SignUp Form Error
 const String kEmailNullError = "Please Enter your email";
 const String kInvalidEmailError = "Please Enter Valid Email";
 const String kPassNullError = "Please Enter your password";
@@ -36,3 +37,16 @@ OutlineInputBorder outlineInputBorder() => OutlineInputBorder(
 const String baseLink = '';
 
 const String playStoreUrl = 'https://play.google.com/store/apps/details?id= ';
+
+const Map<String, String> header = {'Accept': 'application/json'};
+
+Map<String, String> headers = {
+  'Accept': 'application/json',
+  'Authorization': 'Bearer ' + '...',
+};
+
+MultipartRequest postURL(String trail) =>
+    MultipartRequest('POST', Uri.parse(baseLink + trail));
+
+MultipartRequest getURL(String trail) =>
+    MultipartRequest('GET', Uri.parse(baseLink + trail));

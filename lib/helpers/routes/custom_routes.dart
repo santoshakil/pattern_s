@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 
 //Size Route Animation
 class SizeRoute extends PageRouteBuilder {
-  final Widget? page;
+  final Widget page;
   @override
   Duration get transitionDuration => Duration(milliseconds: 200);
   @override
   Duration get reverseTransitionDuration => Duration(milliseconds: 200);
-  SizeRoute({this.page})
+  SizeRoute({required this.page})
       : super(
           pageBuilder: (
             BuildContext context,
             Animation<double> animation,
             Animation<double> secondaryAnimation,
           ) =>
-              page!,
+              page,
           transitionsBuilder: (
             BuildContext context,
             Animation<double> animation,
@@ -32,19 +32,19 @@ class SizeRoute extends PageRouteBuilder {
 
 //Slide Right Route Animation
 class SlideRightRoute extends PageRouteBuilder {
-  final Widget? page;
+  final Widget page;
   @override
   Duration get transitionDuration => Duration(milliseconds: 200);
   @override
   Duration get reverseTransitionDuration => Duration(milliseconds: 200);
-  SlideRightRoute({this.page})
+  SlideRightRoute({required this.page})
       : super(
           pageBuilder: (
             BuildContext context,
             Animation<double> animation,
             Animation<double> secondaryAnimation,
           ) =>
-              page!,
+              page,
           transitionsBuilder: (
             BuildContext context,
             Animation<double> animation,
@@ -63,19 +63,19 @@ class SlideRightRoute extends PageRouteBuilder {
 
 //Slide Left Route Animation
 class SlideLeftRoute extends PageRouteBuilder {
-  final Widget? page;
+  final Widget page;
   @override
   Duration get transitionDuration => Duration(milliseconds: 200);
   @override
   Duration get reverseTransitionDuration => Duration(milliseconds: 200);
-  SlideLeftRoute({this.page})
+  SlideLeftRoute({required this.page})
       : super(
           pageBuilder: (
             BuildContext context,
             Animation<double> animation,
             Animation<double> secondaryAnimation,
           ) =>
-              page!,
+              page,
           transitionsBuilder: (
             BuildContext context,
             Animation<double> animation,
@@ -94,19 +94,19 @@ class SlideLeftRoute extends PageRouteBuilder {
 
 //Scale Route Animation
 class ScaleRoute extends PageRouteBuilder {
-  final Widget? page;
+  final Widget page;
   @override
   Duration get transitionDuration => Duration(milliseconds: 200);
   @override
   Duration get reverseTransitionDuration => Duration(milliseconds: 200);
-  ScaleRoute({this.page})
+  ScaleRoute({required this.page})
       : super(
           pageBuilder: (
             BuildContext context,
             Animation<double> animation,
             Animation<double> secondaryAnimation,
           ) =>
-              page!,
+              page,
           transitionsBuilder: (
             BuildContext context,
             Animation<double> animation,
@@ -130,19 +130,19 @@ class ScaleRoute extends PageRouteBuilder {
 
 //Fade Route Animation
 class FadeRoute extends PageRouteBuilder {
-  final Widget? page;
+  final Widget page;
   @override
   Duration get transitionDuration => Duration(milliseconds: 200);
   @override
   Duration get reverseTransitionDuration => Duration(milliseconds: 200);
-  FadeRoute({this.page})
+  FadeRoute({required this.page})
       : super(
           pageBuilder: (
             BuildContext context,
             Animation<double> animation,
             Animation<double> secondaryAnimation,
           ) =>
-              page!,
+              page,
           transitionsBuilder: (
             BuildContext context,
             Animation<double> animation,
