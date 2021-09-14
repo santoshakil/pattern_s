@@ -18,7 +18,7 @@ SystemUiOverlayStyle uiConfig = SystemUiOverlayStyle(
 ThemeData theme = ThemeData(
   appBarTheme: appBarTheme,
   backgroundColor: white,
-  fontFamily: GoogleFonts.muli().fontFamily,
+  fontFamily: GoogleFonts.droidSans().fontFamily,
   iconTheme: iconThemeData,
   inputDecorationTheme: inputDecorationTheme,
   scaffoldBackgroundColor: white,
