@@ -18,9 +18,9 @@ import 'package:flutter/material.dart'
 class SizeRoute extends PageRouteBuilder {
   final Widget page;
   @override
-  Duration get transitionDuration => Duration(milliseconds: 200);
+  Duration get transitionDuration => const Duration(milliseconds: 200);
   @override
-  Duration get reverseTransitionDuration => Duration(milliseconds: 200);
+  Duration get reverseTransitionDuration => const Duration(milliseconds: 200);
   SizeRoute({required this.page})
       : super(
           pageBuilder: (
@@ -48,9 +48,9 @@ class SizeRoute extends PageRouteBuilder {
 class SlideRightRoute extends PageRouteBuilder {
   final Widget page;
   @override
-  Duration get transitionDuration => Duration(milliseconds: 200);
+  Duration get transitionDuration => const Duration(milliseconds: 200);
   @override
-  Duration get reverseTransitionDuration => Duration(milliseconds: 200);
+  Duration get reverseTransitionDuration => const Duration(milliseconds: 200);
   SlideRightRoute({required this.page})
       : super(
           pageBuilder: (
@@ -79,9 +79,9 @@ class SlideRightRoute extends PageRouteBuilder {
 class SlideLeftRoute extends PageRouteBuilder {
   final Widget page;
   @override
-  Duration get transitionDuration => Duration(milliseconds: 200);
+  Duration get transitionDuration => const Duration(milliseconds: 200);
   @override
-  Duration get reverseTransitionDuration => Duration(milliseconds: 200);
+  Duration get reverseTransitionDuration => const Duration(milliseconds: 200);
   SlideLeftRoute({required this.page})
       : super(
           pageBuilder: (
@@ -110,9 +110,9 @@ class SlideLeftRoute extends PageRouteBuilder {
 class ScaleRoute extends PageRouteBuilder {
   final Widget page;
   @override
-  Duration get transitionDuration => Duration(milliseconds: 200);
+  Duration get transitionDuration => const Duration(milliseconds: 200);
   @override
-  Duration get reverseTransitionDuration => Duration(milliseconds: 200);
+  Duration get reverseTransitionDuration => const Duration(milliseconds: 200);
   ScaleRoute({required this.page})
       : super(
           pageBuilder: (
@@ -146,9 +146,9 @@ class ScaleRoute extends PageRouteBuilder {
 class FadeRoute extends PageRouteBuilder {
   final Widget page;
   @override
-  Duration get transitionDuration => Duration(milliseconds: 200);
+  Duration get transitionDuration => const Duration(milliseconds: 200);
   @override
-  Duration get reverseTransitionDuration => Duration(milliseconds: 200);
+  Duration get reverseTransitionDuration => const Duration(milliseconds: 200);
   FadeRoute({required this.page})
       : super(
           pageBuilder: (

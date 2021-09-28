@@ -65,5 +65,5 @@ OutlineInputBorder lightOutlineInputBorder = OutlineInputBorder(
 );
 
 const BoxDecoration lightTabDecoration = BoxDecoration(
-  borderRadius: const BorderRadius.all(Radius.circular(30)),
+  borderRadius: BorderRadius.all(Radius.circular(30)),
 );
