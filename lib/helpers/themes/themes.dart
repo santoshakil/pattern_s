@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart' show Color, Colors, ThemeData;
+import 'package:flutter/material.dart' show Color, Colors;
 import 'package:flutter/services.dart' show SystemUiOverlayStyle;
-import 'package:pattern_s/models/config/config.dart';
 
 import '../../database/hive.dart' show Boxes;
+import '../../models/config/config.dart' show Configs;
 import '../../models/theme/theme.dart' show Themes;
-import 'light/light.dart' show lightTheme, lightUiConfig;
+import 'light/light.dart' show lightUiConfig;
 
 const Color white = Colors.white;
 const Color black = Colors.black;
@@ -14,6 +14,5 @@ Themes? get themeType => Boxes.configs
     .get('data', defaultValue: Configs(theme: Themes.light))!
     .theme;
 
-ThemeData get theme => themeType == Themes.light ? lightTheme : lightTheme;
 SystemUiOverlayStyle get uiConfig =>
     themeType == Themes.light ? lightUiConfig : lightUiConfig;
