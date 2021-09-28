@@ -1,15 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:hive/hive.dart';
+import 'package:flutter/material.dart'
+    show MaterialApp, WidgetsFlutterBinding, runApp;
+import 'package:flutter/services.dart' show SystemChrome;
 import 'package:hive_flutter/hive_flutter.dart';
 
-import 'helpers/themes/themes.dart';
-import 'screens/wrapper.dart';
+import 'database/functions.dart' show HiveFuntions;
+import 'helpers/themes/themes.dart' show theme, uiConfig;
+import 'screens/wrapper.dart' show Wrapper;
 
 Future<void> main() async {
-  await Hive.initFlutter();
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setSystemUIOverlayStyle(uiConfig);
+  await _init();
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -17,4 +16,12 @@ Future<void> main() async {
       home: Wrapper(),
     ),
   );
+}
+
+Future<void> _init() async {
+  await Hive.initFlutter();
+  HiveFuntions.registerHiveAdepters();
+  await HiveFuntions.openAllBoxes();
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(uiConfig);
 }

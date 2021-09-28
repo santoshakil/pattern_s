@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'
+    show BuildContext, StatelessWidget, Widget;
 
-import '../helpers/size_config/size_config.dart';
-import 'screen1/screen1.dart';
+import '../helpers/size_config/size_config.dart' show ScreenSize;
+import 'screen1/screen1.dart' show Screen1;
 
 class Wrapper extends StatelessWidget {
   @override

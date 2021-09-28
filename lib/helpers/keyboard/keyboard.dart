@@ -1,10 +1,9 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/widgets.dart'
+    show BuildContext, FocusScope, FocusScopeNode;
 
-class Keyboard {
-  static void hide(BuildContext context) {
-    FocusScopeNode currentFocus = FocusScope.of(context);
-    if (!currentFocus.hasPrimaryFocus) {
-      currentFocus.unfocus();
-    }
+void hideKeyboard(BuildContext context) {
+  FocusScopeNode currentFocus = FocusScope.of(context);
+  if (!currentFocus.hasPrimaryFocus) {
+    currentFocus.unfocus();
   }
 }

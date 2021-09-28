@@ -1,8 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:http/http.dart';
-import 'package:intl/intl.dart';
-
-import '../size_config/size_config.dart';
+import 'package:http/http.dart' show MultipartRequest;
+import 'package:intl/intl.dart' show DateFormat;
 
 DateFormat dateFormat = DateFormat("dd-MM-yy");
 
@@ -30,15 +27,11 @@ const String kAddressNullError = "Please Enter your address";
 const String kCountryNullError = "Please Select your Country";
 const String kStateNullError = "Please Select your State";
 
-OutlineInputBorder outlineInputBorder() => OutlineInputBorder(
-      borderRadius: BorderRadius.circular(getProportionateScreenWidth(15)),
-    );
-
 const String baseLink = '';
 
 const String playStoreUrl = 'https://play.google.com/store/apps/details?id= ';
 
-const Map<String, String> header = {'Accept': 'application/json'};
+const Map<String, String> headerNoAuth = {'Accept': 'application/json'};
 
 Map<String, String> headers = {
   'Accept': 'application/json',

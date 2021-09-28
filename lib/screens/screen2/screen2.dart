@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'components/body.dart';
+import 'components/body.dart' show Body;
 
 class Screen2 extends StatelessWidget {
   @override

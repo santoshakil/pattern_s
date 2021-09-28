@@ -1,4 +1,18 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'
+    show
+        Align,
+        Animation,
+        BuildContext,
+        CurvedAnimation,
+        Curves,
+        FadeTransition,
+        Offset,
+        PageRouteBuilder,
+        ScaleTransition,
+        SizeTransition,
+        SlideTransition,
+        Tween,
+        Widget;
 
 //Size Route Animation
 class SizeRoute extends PageRouteBuilder {
