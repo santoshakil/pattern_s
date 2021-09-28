@@ -10,10 +10,14 @@ class ThemeProvider with ChangeNotifier {
   ThemeData get theme => themeType == Themes.light ? lightTheme : lightTheme;
 
   Future<void> changeTheme(Themes data) async {
-    var _data =
-        Boxes.configs.get('data', defaultValue: Configs(theme: Themes.light));
-    _data!.theme = data;
-    await _data.save();
+    if (Boxes.configs.containsKey('data')) {
+      var _data = Boxes.configs.get('data')!;
+      _data.theme = data;
+      await _data.save();
+    } else {
+      await Boxes.configs
+          .put('data', Configs(theme: Themes.light, isFirstLaunch: false));
+    }
     notifyListeners();
   }
 }
