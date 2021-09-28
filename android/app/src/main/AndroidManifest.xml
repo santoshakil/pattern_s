@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.databytesoft.santo_pattern">
+    package="com.databytesoft.pattern_s">
     <uses-permission android:name="android.permission.INTERNET" />
     <application
-        android:label="santo_pattern"
+        android:label="pattern_s"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

@@ -11,4 +11,9 @@ class Configs extends HiveObject {
   bool? isFirstLaunch;
   @HiveField(1, defaultValue: Themes.light)
   Themes? theme;
+
+  Configs({
+    this.isFirstLaunch,
+    this.theme,
+  });
 }

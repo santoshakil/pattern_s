@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(runner LANGUAGES CXX)
 
-set(BINARY_NAME "santo_pattern")
-set(APPLICATION_ID "com.databytesoft.santo_pattern")
+set(BINARY_NAME "pattern_s")
+set(APPLICATION_ID "com.databytesoft.pattern_s")
 
 cmake_policy(SET CMP0063 NEW)
 

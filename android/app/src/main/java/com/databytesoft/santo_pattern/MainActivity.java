@@ -1,4 +1,4 @@
-package com.databytesoft.santo_pattern;
+package com.databytesoft.pattern_s;
 
 import io.flutter.embedding.android.FlutterActivity;
 

@@ -1,4 +1,4 @@
-# santo_pattern
+# pattern_s
 
 A new Flutter project.
 

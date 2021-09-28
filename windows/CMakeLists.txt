@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
-project(santo_pattern LANGUAGES CXX)
+project(pattern_s LANGUAGES CXX)
 
-set(BINARY_NAME "santo_pattern")
+set(BINARY_NAME "pattern_s")
 
 cmake_policy(SET CMP0063 NEW)
 

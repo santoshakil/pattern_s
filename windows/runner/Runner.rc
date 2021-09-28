@@ -92,10 +92,10 @@ BEGIN
             VALUE "CompanyName", "com.databytesoft" "\0"
             VALUE "FileDescription", "A new Flutter project." "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "santo_pattern" "\0"
+            VALUE "InternalName", "pattern_s" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2021 com.databytesoft. All rights reserved." "\0"
-            VALUE "OriginalFilename", "santo_pattern.exe" "\0"
-            VALUE "ProductName", "santo_pattern" "\0"
+            VALUE "OriginalFilename", "pattern_s.exe" "\0"
+            VALUE "ProductName", "pattern_s" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

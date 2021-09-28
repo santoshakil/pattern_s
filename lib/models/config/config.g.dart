@@ -8,7 +8,7 @@ part of 'config.dart';
 
 class ConfigsAdapter extends TypeAdapter<Configs> {
   @override
-  final int typeId = 0;
+  final int typeId = 1;
 
   @override
   Configs read(BinaryReader reader) {
@@ -16,9 +16,10 @@ class ConfigsAdapter extends TypeAdapter<Configs> {
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return Configs()
-      ..isFirstLaunch = fields[0] == null ? true : fields[0] as bool?
-      ..theme = fields[1] == null ? Themes.light : fields[1] as Themes?;
+    return Configs(
+      isFirstLaunch: fields[0] == null ? true : fields[0] as bool?,
+      theme: fields[1] == null ? Themes.light : fields[1] as Themes?,
+    );
   }
 
   @override
