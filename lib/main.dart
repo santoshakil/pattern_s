@@ -1,53 +1,48 @@
-import 'package:flutter/material.dart'
-    show
-        BuildContext,
-        Key,
-        MaterialApp,
-        StatelessWidget,
-        Widget,
-        WidgetsFlutterBinding,
-        runApp;
-import 'package:flutter/services.dart' show SystemChrome;
-import 'package:hive_flutter/hive_flutter.dart';
-import 'package:provider/provider.dart' show MultiProvider, Provider;
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'services/storage.s.dart';
+import 'providers/app.p.dart';
 
-import 'database/functions.dart' show HiveFuntions;
-import 'helpers/themes/themes.dart' show uiConfig;
-import 'providers/providers.dart';
-import 'providers/theme/theme.dart' show ThemeProvider;
-import 'screens/wrapper.dart' show Wrapper;
-
-Future<void> main() async {
-  await _init();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  final prefs = await SharedPreferences.getInstance();
+  
   runApp(
-    MultiProvider(
-      providers: providers,
-      child: const Main(),
+    ProviderScope(
+      overrides: [
+        sharedPreferencesProvider.overrideWithValue(prefs),
+      ],
+      child: const MyApp(),
     ),
   );
 }
 
-Future<void> _init() async {
-  await Hive.initFlutter();
-  HiveFuntions.registerHiveAdepters();
-  await HiveFuntions.openAllBoxes();
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setSystemUIOverlayStyle(uiConfig);
-}
-
-class Main extends StatelessWidget {
-  const Main({
-    Key? key,
-  }) : super(key: key);
+class MyApp extends ConsumerWidget {
+  const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    var _theme = Provider.of<ThemeProvider>(context);
-
-    return MaterialApp(
+  Widget build(BuildContext context, WidgetRef ref) {
+    final router = ref.watch(routerProvider);
+    final themeMode = ref.watch(themeModeProvider);
+    
+    return MaterialApp.router(
+      title: 'Pattern S',
       debugShowCheckedModeBanner: false,
-      theme: _theme.theme,
-      home: Wrapper(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
+      ),
+      darkTheme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue,
+          brightness: Brightness.dark,
+        ),
+        useMaterial3: true,
+      ),
+      themeMode: themeMode,
+      routerConfig: router,
     );
   }
 }

@@ -1,0 +1,16 @@
+{
+  "appTitle": "Pattern S",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "home": "Home",
+  "settings": "Settings",
+  "theme": "Theme",
+  "about": "About",
+  "light": "Light",
+  "dark": "Dark",
+  "system": "System",
+  "chooseTheme": "Choose Theme",
+  "counterText": "You have pushed the button this many times:",
+  "increment": "Increment"
+}
